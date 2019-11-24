@@ -112,12 +112,6 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        // set variables for output string
-        String posType = "";
-        String name = "";
-        String employer = "";
-        String location = "";
-        String coreComp = "";
         String outputJobs = "";
 
         // check if ArrayList is empty
@@ -133,9 +127,7 @@ public class TechJobs {
             for (Map.Entry<String,String> entry : someJob.entrySet()){
                 outputJobs += entry.getKey() + ": " + entry.getValue() + "\n";
             }
-            if (someJob.equals(someJobs.get(someJobs.size() - 1))){
-                outputJobs += "*****\n";
-            }
+            outputJobs += "*****\n";
         }
         System.out.println(outputJobs);
     }
